@@ -1,4 +1,5 @@
 let time = 0
+radio.setGroup(55)
 basic.forever(function () {
     if (input.magneticForce(Dimension.X) > 30) {
         time = 10
@@ -7,10 +8,12 @@ basic.forever(function () {
             basic.showNumber(time)
             while (time == 0 && input.magneticForce(Dimension.X) > 30) {
                 basic.showIcon(IconNames.Sad)
-                music.playMelody("B A C5 B A C5 B A ", 250)
+                music.playTone(262, music.beat(BeatFraction.Whole))
+                radio.sendNumber(1)
             }
         }
     } else {
         basic.showIcon(IconNames.Happy)
+        radio.sendNumber(0)
     }
 })
