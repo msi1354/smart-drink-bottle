@@ -8,8 +8,6 @@ basic.forever(function () {
             while (time == 0 && input.magneticForce(Dimension.X) > 30) {
                 basic.showIcon(IconNames.Sad)
                 music.playMelody("B A C5 B A C5 B A ", 250)
-                basic.pause(2000)
-                control.reset()
             }
         }
     } else {
