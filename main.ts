@@ -2,7 +2,7 @@ let time = 0
 radio.setGroup(55)
 basic.forever(function () {
     if (input.magneticForce(Dimension.X) > 30) {
-        time = 21
+        time = 16
         while (time > 0 && input.magneticForce(Dimension.X) > 30) {
             time += 0 - 1
             basic.showNumber(time)
